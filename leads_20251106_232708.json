@@ -1,0 +1,74 @@
+[
+  {
+    "business_name": "Suraj Real Estates",
+    "phone": "096036 23555",
+    "address": "8-2-299/82/W/83, Durga Bhavani Nagar, Women's Welfare Housing Society, Jubilee Hills, Hyderabad, Telangana 500033, India",
+    "rating": 4.7,
+    "total_reviews": 135,
+    "google_maps_url": "https://maps.google.com/?cid=12844940076234580336",
+    "place_id": "ChIJkXtIo9GQyzsRcCEkpfFkQrI",
+    "category": "Real_Estate",
+    "search_keyword": "real estate agency",
+    "scraped_date": "2025-11-06 23:25:57"
+  },
+  {
+    "business_name": "Sunridge Multi-Speciality Hospital, Moti Nagar, Hyderabad",
+    "phone": "096527 66690",
+    "address": "K/21, 8-3-167, Kalyan Nagar Phase 3 Rd, phase-3, Pramila Enclave, Kalyan Nagar, Moti Nagar, Hyderabad, Telangana 500114, India",
+    "rating": 4.5,
+    "total_reviews": 774,
+    "google_maps_url": "https://maps.google.com/?cid=9325929886847917608",
+    "place_id": "ChIJI9in0UeRyzsRKN7EOdJbbIE",
+    "category": "Healthcare_Medical",
+    "search_keyword": "hospital",
+    "scraped_date": "2025-11-06 23:26:00"
+  },
+  {
+    "business_name": "Vemula enterprises insurance agency",
+    "phone": "098482 55766",
+    "address": "HASANABAD NILAYAM, near TKR COLLEGE OF ENGINEERING & TECHNOLOGY, Raghava Nagar Colony, Lakshmi Nagar Colony Park, Hanuman Nagar, Meerpet, Hyderabad, Telangana 500079, India",
+    "rating": 5,
+    "total_reviews": 9,
+    "google_maps_url": "https://maps.google.com/?cid=7248852020287655227",
+    "place_id": "ChIJcQH6hFejyzsRO02eooEYmWQ",
+    "category": "Finance_Insurance",
+    "search_keyword": "insurance agency",
+    "scraped_date": "2025-11-06 23:26:03"
+  },
+  {
+    "business_name": "EasyQuickWeb",
+    "phone": "081424 45122",
+    "address": "16-11-220, near Aurora's PG College, Teegala Guda, East Prasanth Nagar, Moosarambagh, Hyderabad, Telangana 500036, India",
+    "rating": 4.9,
+    "total_reviews": 355,
+    "google_maps_url": "https://maps.google.com/?cid=15092359176813483883",
+    "place_id": "ChIJ3xa5smiZyzsRaxeTZLXUctE",
+    "category": "SaaS_Tech",
+    "search_keyword": "web development company",
+    "scraped_date": "2025-11-06 23:26:48"
+  },
+  {
+    "business_name": "Car Scrap Buyer in hyderabad",
+    "phone": "093925 62337",
+    "address": "Nampally Red hills happy homes castles, Devi Bagh, Red Hills, Lakdikapul, Hyderabad, Telangana 500004, India",
+    "rating": 5,
+    "total_reviews": 136,
+    "google_maps_url": "https://maps.google.com/?cid=3011027550628532597",
+    "place_id": "ChIJvzi9tYaXyzsRddEgrJpRySk",
+    "category": "Automotive",
+    "search_keyword": "car dealer",
+    "scraped_date": "2025-11-06 23:27:06"
+  },
+  {
+    "business_name": "Master Training Institute",
+    "phone": "090596 44678",
+    "address": "Street Number 2, BNK Colony, Basti Nabi Kareem, Tad Bun, Hyderabad, Telangana 500064, India",
+    "rating": 4.9,
+    "total_reviews": 30,
+    "google_maps_url": "https://maps.google.com/?cid=16895106044996428724",
+    "place_id": "ChIJfw4VCgCXyzsRtCORDm95d-o",
+    "category": "Education_Training",
+    "search_keyword": "training institute",
+    "scraped_date": "2025-11-06 23:27:08"
+  }
+]
