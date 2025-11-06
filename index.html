@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADSOIRE LEADS - Lead Management Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <i class="fas fa-chart-line logo-icon"></i>
+                    <h1 class="dashboard-title">ADSOIRE LEADS</h1>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-secondary" id="exportBtn">
+                        <i class="fas fa-download"></i> Export CSV
+                    </button>
+                    <button class="btn btn-secondary" id="refreshBtn">
+                        <i class="fas fa-sync-alt"></i> Refresh
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Statistics Cards -->
+        <div class="stats-container">
+            <div class="stat-card stat-total">
+                <div class="stat-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-number" id="totalLeads">0</h3>
+                    <p class="stat-label">Total Leads</p>
+                </div>
+            </div>
+            <div class="stat-card stat-contacted">
+                <div class="stat-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-number" id="contactedLeads">0</h3>
+                    <p class="stat-label">Contacted</p>
+                </div>
+            </div>
+            <div class="stat-card stat-interested">
+                <div class="stat-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-number" id="interestedLeads">0</h3>
+                    <p class="stat-label">Interested</p>
+                </div>
+            </div>
+            <div class="stat-card stat-converted">
+                <div class="stat-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-number" id="convertedLeads">0</h3>
+                    <p class="stat-label">Converted</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filters Section -->
+        <div class="filters-container">
+            <div class="filters-row">
+                <div class="filter-group">
+                    <label for="searchInput">
+                        <i class="fas fa-search"></i> Search
+                    </label>
+                    <input type="text" id="searchInput" placeholder="Search by business name, address, phone...">
+                </div>
+
+                <div class="filter-group">
+                    <label for="categoryFilter">
+                        <i class="fas fa-tag"></i> Category
+                    </label>
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="statusFilter">
+                        <i class="fas fa-flag"></i> Status
+                    </label>
+                    <select id="statusFilter">
+                        <option value="all">All Status</option>
+                        <option value="pending">Pending</option>
+                        <option value="contacted">Contacted</option>
+                        <option value="call_later">Call Later</option>
+                        <option value="interested">Interested</option>
+                        <option value="not_interested">Not Interested</option>
+                        <option value="proposal_sent">Proposal Sent</option>
+                        <option value="negotiation">Negotiation</option>
+                        <option value="converted">Converted</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="ratingFilter">
+                        <i class="fas fa-star"></i> Rating
+                    </label>
+                    <select id="ratingFilter">
+                        <option value="all">All Ratings</option>
+                        <option value="5">5 Stars Only</option>
+                        <option value="4.5">4.5+ Stars</option>
+                        <option value="4">4+ Stars</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="sortFilter">
+                        <i class="fas fa-sort"></i> Sort By
+                    </label>
+                    <select id="sortFilter">
+                        <option value="date_desc">Latest First</option>
+                        <option value="date_asc">Oldest First</option>
+                        <option value="rating_desc">Highest Rating</option>
+                        <option value="rating_asc">Lowest Rating</option>
+                        <option value="reviews_desc">Most Reviews</option>
+                        <option value="name_asc">Name A-Z</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-reset" id="resetFilters">
+                    <i class="fas fa-redo"></i> Reset Filters
+                </button>
+            </div>
+        </div>
+
+        <!-- View Toggle -->
+        <div class="view-toggle">
+            <button class="view-btn active" id="gridViewBtn">
+                <i class="fas fa-th"></i> Grid
+            </button>
+            <button class="view-btn" id="listViewBtn">
+                <i class="fas fa-list"></i> List
+            </button>
+            <div class="results-count" id="resultsCount">Showing 0 leads</div>
+        </div>
+
+        <!-- Leads Grid -->
+        <div class="leads-grid" id="leadsContainer">
+            <!-- Lead cards will be dynamically inserted here -->
+        </div>
+
+        <!-- No Results Message -->
+        <div class="no-results" id="noResults" style="display: none;">
+            <i class="fas fa-search"></i>
+            <h3>No leads found</h3>
+            <p>Try adjusting your filters or search criteria</p>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div class="loading-spinner" id="loadingSpinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Loading leads...</p>
+        </div>
+    </div>
+
+    <!-- Lead Detail Modal -->
+    <div class="modal" id="leadModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Lead Details</h2>
+                <button class="modal-close" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Lead details will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
