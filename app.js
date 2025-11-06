@@ -25,7 +25,7 @@ class LeadManagementSystem {
 
     async loadLeadsData() {
         try {
-            const response = await fetch('leads_20251106_232708.json');
+            const response = await fetch('leads_20251106_235428.json');
             const data = await response.json();
             this.leads = data.map((lead, index) => ({
                 ...lead,
@@ -34,7 +34,7 @@ class LeadManagementSystem {
             this.filteredLeads = [...this.leads];
         } catch (error) {
             console.error('Error loading leads:', error);
-            alert('Error loading leads data. Please ensure leads_20251106_232708.json is in the same directory.');
+            alert('Error loading leads data. Please ensure leads_20251106_235428.json is in the same directory.');
         }
     }
 
